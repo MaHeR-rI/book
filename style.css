@@ -1,0 +1,1466 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Quintessential&display=swap");
+
+:root {
+  --bookloft-pink: #fc6681;
+  --bookloft-lpink: #f6b0bd;
+  --bookloft-green: #669998;
+  --bookloft-dgreen: #436463;
+  --bookloft-lgreen: #7fe8dc;
+  --bookloft-backg: #f5f5f5;
+  --bookloft-yellow: #eaa451;
+  --bookloft-dblue: #1a1668;
+  --border-radius-base: 6px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: initial;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.side-bar {
+  display: none;
+}
+.header-bar {
+  border-bottom: 1px solid #ebebeb;
+}
+
+.header-bar .navbar-brand {
+  min-width: 200px;
+}
+
+.header-bar .navbar-brand img {
+  max-width: 80px;
+}
+
+.header-bar .navbar-brand h6,
+.side-bar .small-nav h6 {
+  font-family: "Quintessential", cursive;
+  font-weight: 700;
+  font-size: 25px;
+  margin: 0;
+  letter-spacing: 3px;
+}
+
+.header-bar .navbar-brand h6 span:first-of-type,
+.side-bar .small-nav h6 span:first-of-type {
+  color: var(--bookloft-lgreen);
+}
+
+.header-bar .navbar-brand h6 span:last-of-type,
+.side-bar .small-nav h6 span:last-of-type {
+  color: var(--bookloft-green);
+}
+
+.header-bar .search,
+.side-bar .search {
+  position: relative;
+  width: 100%;
+}
+
+.header-bar .search input,
+.side-bar .search input {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: var(--bookloft-backg);
+  border: none;
+  border-radius: 5px;
+  height: 48px;
+  color: #777;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
+.header-bar .search input::placeholder,
+.side-bar .search input::placeholder {
+  color: #777;
+}
+
+.header-bar .search input:focus,
+.side-bar .search input:focus {
+  outline: none;
+}
+
+.header-bar .search button,
+.side-bar .search button {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  color: #777;
+}
+
+.header-bar .extra-nav {
+  margin-left: 20px;
+  gap: 10px;
+}
+
+.header-bar .extra-nav a {
+  padding: 8px 0px;
+  font-size: 16px;
+  min-width: 48px;
+  text-align: center;
+  color: var(--bookloft-pink);
+  border-radius: 5px;
+  transition: 0.2s;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-bar .extra-nav i {
+  color: black;
+}
+
+.header-bar .extra-nav a:hover {
+  background-color: var(--bookloft-backg);
+}
+.sticky-nav.sticky,
+.side-bar .small-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 1px 1px #acacac;
+  animation: shownav 1s ease-in-out;
+  padding: 0px 7%;
+  z-index: 1000;
+}
+@keyframes shownav {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.sticky-nav .categories {
+  list-style-type: none;
+}
+.sticky-nav .categories li a {
+  display: block;
+  padding: 32px 15px;
+  color: var(--bookloft-dblue);
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.sticky-nav .categories li a:hover {
+  color: var(--bookloft-pink);
+}
+
+.sticky-nav .buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding-right: 40px;
+}
+
+.sticky-nav .buttons a {
+  position: relative;
+  display: block;
+  background-color: var(--bookloft-pink);
+  text-decoration: none;
+  padding: 12.5px 20px;
+  color: white;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 15px;
+  transition: 0.3s;
+  border: none;
+  border-radius: var(--border-radius-base);
+}
+
+.sticky-nav .buttons a::before {
+  content: "";
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-right: 2px solid white;
+  transform: translateX(-100%);
+  z-index: 1;
+  transition: 0.6s;
+}
+
+.sticky-nav .buttons a:hover::before {
+  transform: translateX(0%);
+}
+
+.offcanvas {
+  max-width: 280px !important;
+}
+.side-bar .small-nav i {
+  cursor: pointer;
+  background-color: var(--bookloft-dgreen);
+  color: white;
+  padding: 20px 10px;
+  border-radius: var(--border-radius-base);
+}
+.side-bar .side-menu ul {
+  list-style-type: none;
+  margin-top: 20px;
+}
+.side-bar .side-menu .categories li a:hover {
+  color: var(--bookloft-pink);
+}
+.side-bar .side-menu li {
+  margin-bottom: 15px;
+}
+.side-bar .side-menu li a {
+  padding: 10px;
+  color: var(--bookloft-dblue);
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.sticky-nav .buttons .switch,
+.side-bar .buttons .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+/* Hide default HTML checkbox */
+.sticky-nav .buttons .switch input,
+.side-bar .buttons .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.sticky-nav .buttons .slider,
+.side-bar .buttons .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bookloft-green);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.sticky-nav .buttons .slider:before,
+.side-bar .buttons .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.sticky-nav .buttons input:checked + .slider,
+.side-bar .buttons input:checked + .slider {
+  background-color: var(--bookloft-pink);
+}
+
+.sticky-nav .buttons input:focus + .slider,
+.side-bar .buttons input:focus + .slider {
+  box-shadow: 0 0 1px transparent;
+}
+
+.sticky-nav .buttons input:checked + .slider:before,
+.side-bar .buttons input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.sticky-nav .buttons .slider.round,
+.side-bar .buttons .slider.round {
+  border-radius: 34px;
+}
+
+.sticky-nav .buttons .slider.round:before,
+.side-bar .buttons .slider.round:before {
+  border-radius: 50%;
+}
+
+.sticky-nav .buttons .switch .active-checkbox,
+.side-bar .buttons .switch .active-checkbox {
+  position: absolute;
+  transform: translateY(-50%);
+  right: -40px;
+  top: 50%;
+  color: #777;
+}
+/* end nav styles */
+.mySwiper .swiper-container-fade .swiper-slide {
+  pointer-events: none;
+  transition-property: opacity;
+}
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+.swiper .swiper-pagination-bullet-active {
+  color: #fff;
+  background: var(--bookloft-pink);
+}
+.mySwiper .swiper-slide {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 500px;
+}
+.mySwiper .swiper-slide::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, black 30%, transparent);
+  opacity: 0.5;
+  z-index: 1;
+}
+.mySwiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel-caption {
+  z-index: 2;
+  width: 100%;
+  right: initial;
+  left: 0;
+  padding: 10px 50px;
+  bottom: 30px;
+}
+.carousel-caption .buttons .mybtn {
+  width: 400px;
+  padding: 12.5px 20px;
+  line-height: 1.5;
+  border-radius: var(--border-radius-base);
+  font-weight: 500;
+  position: relative;
+  text-transform: capitalize;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+  text-align: center;
+  transition: all 0.2s;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+.carousel-caption .buttons .add-cart {
+  background-color: var(--bookloft-pink);
+}
+.carousel-caption .buttons .details {
+  background-color: var(--bookloft-green);
+}
+.carousel-caption .buttons .mybtn::before {
+  content: "";
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-right: 2px solid white;
+  transform: translateX(-100%);
+  z-index: 1;
+  transition: 0.6s;
+}
+.carousel-caption .buttons .mybtn:hover::before {
+  transform: translateX(0%);
+}
+.carousel-caption .content .order {
+  color: #f0bbe3;
+  line-height: 1.6;
+  letter-spacing: 20px;
+}
+.carousel-caption .content h1 {
+  font-size: 2.125rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.carousel-caption .content > a {
+  font-size: 1.25rem;
+  margin-right: 2px;
+  color: #e5ccb8;
+}
+.carousel-caption .content .price {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--bookloft-yellow);
+}
+.carousel-caption .content .price span {
+  text-decoration: line-through;
+  font-size: 18px;
+  margin-left: 10px;
+  color: #e5ccb8;
+  font-weight: initial;
+}
+/* services section styling */
+.services .service {
+  text-align: center;
+  padding: 0px 7px;
+}
+.services .service .icon-box {
+  margin: 0px auto 30px;
+  background-color: rgba(102, 153, 152, 0.3);
+  border-radius: var(--border-radius-base);
+  font-size: 26px;
+  width: 60px;
+  height: 60px;
+  color: #777777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.services .service .icon-box:hover {
+  background-color: var(--bookloft-lgreen);
+}
+/* start second carousel styling */
+.book-slider {
+  background-color: #f7f7f7;
+}
+.book-slider .book-slider-title h1 {
+  color: var(--bookloft-dblue);
+}
+.book-slider .book-slider-title p {
+  color: #777777;
+}
+.mySwiper2 .swiper-slide {
+  font-size: 18px;
+  background: transparent;
+  padding: 50px 200px 100px;
+}
+.mySwiper2 .swiper-slide .book-img {
+  display: block;
+  width: 70%;
+  margin-left: auto;
+}
+.mySwiper2 .content {
+  padding-left: 70px;
+  text-align: start;
+}
+.mySwiper2 .content h1 {
+  color: var(--bookloft-dblue);
+  font-size: 40px;
+  font-weight: 600;
+}
+.mySwiper2 .content > span {
+  color: var(--bookloft-dblue);
+}
+.mySwiper2 .content p:first-of-type {
+  margin-top: 50px;
+  border-left: 1px solid var(--bookloft-dblue);
+  padding-left: 20px;
+  line-height: 1.5;
+  color: #777777;
+}
+.mySwiper2 .content p:last-of-type {
+  margin-top: 50px;
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--bookloft-dblue);
+}
+.mySwiper2 .content p:last-of-type span {
+  text-decoration: line-through;
+  font-size: 22px;
+  color: var(--bookloft-pink);
+  font-weight: initial;
+  margin-left: 10px;
+}
+.mySwiper2 .content .buttons a {
+  width: 140px;
+  text-align: center;
+  transition: 0.3s;
+  padding: 8px 16px;
+  border-radius: var(--border-radius-base);
+}
+.mySwiper2 .content .buttons a:first-of-type {
+  border: 1px solid var(--bookloft-pink);
+  background-color: var(--bookloft-pink);
+  color: white;
+}
+.mySwiper2 .content .buttons a:last-of-type {
+  border: 1px solid var(--bookloft-dblue);
+  color: var(--bookloft-dblue);
+}
+.mySwiper2 .content .buttons a:first-of-type:hover {
+  border: 1px solid var(--bookloft-pink);
+  color: var(--bookloft-pink);
+  background-color: white;
+}
+.mySwiper2 .content .buttons a:last-of-type:hover {
+  border: 1px solid white;
+  color: white;
+  background-color: var(--bookloft-dblue);
+}
+.mySwiper2 .swiper-button-next,
+.mySwiper2 .swiper-button-prev {
+  font-size: 10px;
+  color: white;
+  background-color: var(--bookloft-pink);
+  border-radius: 50%;
+  /* padding: 2px 10px; */
+  font-weight: bold;
+  top: initial;
+  bottom: 40px;
+  width: 30px;
+  height: 30px;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: inherit;
+}
+.mySwiper2 .swiper-button-prev {
+  left: 35%;
+  right: initial;
+}
+.mySwiper2 .swiper-button-next {
+  right: 35%;
+  left: initial;
+}
+/* categories section styling */
+.cat-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--bookloft-dblue);
+  font-weight: 600;
+}
+.categories {
+  gap: 4%;
+}
+.categories .box {
+  width: 48%;
+  margin-bottom: 40px;
+  border-radius: var(--border-radius-base);
+}
+.categories .box:nth-of-type(1) {
+  background-color: #8487d7;
+}
+.categories .box:nth-of-type(2) {
+  background-color: #e08585;
+}
+.categories .box:nth-of-type(3) {
+  background-color: #a2abeb;
+}
+.categories .box:nth-of-type(4) {
+  background-color: #745373;
+}
+.categories .box a {
+  display: block;
+  background-image: url("https://bookloftlb.galactech.site/images/doodles.png");
+  background-position: center;
+  background-size: cover;
+  padding: 70px 50px;
+  color: white;
+  text-align: center;
+  color: white;
+}
+.categories .box a h3 {
+  font-weight: 600;
+  font-size: 30px;
+}
+.categories .box a:hover h3 {
+  animation: pophover 0.5s ease-in-out;
+}
+@keyframes pophover {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* statistics styling  */
+.statistics .service {
+  text-align: center;
+  padding: 0px 7px;
+}
+.statistics .service .icon-box {
+  margin: 0px auto 30px;
+  background-color: #669998;
+  border-radius: var(--border-radius-base);
+  font-size: 45px;
+  width: 120px;
+  height: 120px;
+  color: #7fe8dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.services .service h5,
+.statistics .service h2 {
+  font-weight: 600;
+  color: #494648;
+}
+.services .service p,
+.statistics .service p {
+  color: #777777;
+  font-size: 18px;
+}
+/* start footer styling */
+footer a {
+  padding-left: 20px;
+  position: relative;
+  transition: 0.3s;
+}
+footer a::before {
+  position: absolute;
+  left: 0px;
+  content: "\f531";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: var(--bookloft-pink);
+  font-size: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+footer .foot-icon {
+  color: var(--bookloft-pink);
+}
+footer img {
+  display: block;
+  margin: 0px auto;
+}
+footer .sub-foot {
+  background-color: white;
+  border-top: 1px solid #ccc;
+  font-size: 14px;
+  color: #acacac;
+}
+/* start shop page */
+/* start shop page */
+.giveaway {
+  border-radius: var(--border-radius-base);
+  background-color: var(--bookloft-pink);
+  color: white;
+  position: relative;
+}
+.giveaway i {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 2;
+  border-radius: 50%;
+  color: var(--bookloft-pink);
+  background-color: white;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+  font-weight: bold;
+}
+.giveaway::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, white, transparent);
+  opacity: 0.3;
+}
+.giveaway h3 {
+  font-family: "Quintessential", cursive;
+  font-weight: 700;
+  font-size: 25px;
+  margin: 0;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.giveaway span {
+  font-size: 14px;
+}
+.shop-title {
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.search-product {
+  background-color: white;
+  border-radius: var(--border-radius-base);
+  padding: 20px 40px;
+}
+.search-product .inputs input {
+  width: 100%;
+  padding: 10px 16px;
+  transition: 0.3s;
+  border: 1px solid #777;
+  border-radius: var(--border-radius-base);
+  background-color: #f5f5f5;
+}
+.search-product .inputs input:focus {
+  outline: 1px solid var(--bookloft-pink);
+}
+.search-product .inputs button {
+  width: 300px;
+  text-align: center;
+  transition: 0.3s;
+  padding: 10px 16px;
+  border-radius: var(--border-radius-base);
+  background-color: var(--bookloft-pink);
+  color: white;
+  border: none;
+  margin-left: 20px;
+}
+.search-product .coll-toggle {
+  color: var(--bookloft-pink);
+}
+.books-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 50px;
+}
+.books-container .product-card {
+  padding: 20px;
+  background-color: white;
+  border-radius: var(--border-radius-base);
+  text-align: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.books-container .product-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.books-container .product-card img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.books-container .product-card h5 {
+  color: var(--bookloft-dblue);
+  margin: 0;
+}
+.books-container .product-card span {
+  color: #acacac;
+}
+.books-container .product-card p {
+  color: var(--bookloft-pink);
+  font-weight: 500;
+  font-size: 18px;
+}
+.books-container .product-card a,
+.single .single-add {
+  text-transform: capitalize;
+  color: white;
+  background-color: var(--bookloft-pink);
+  border-radius: var(--border-radius-base);
+  padding: 10px 20px;
+}
+.pagination {
+  width: max-content;
+  margin: auto;
+}
+.pagination li a {
+  color: var(--bookloft-dblue);
+  font-size: 18px;
+  margin: 0px 7px;
+  min-width: 40px;
+  text-align: center;
+  border-radius: var(--border-radius-base);
+  background-color: #ebebeb;
+  transition: 0.3s;
+}
+.pagination li a:hover {
+  color: white;
+  background-color: var(--bookloft-dblue);
+}
+/* start about us page */
+/* start about us page */
+.about-cover {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  background: linear-gradient(150deg, var(--bookloft-green) 70%, #7da8a7 30%);
+}
+.about-cover h1 {
+  font-size: 50px;
+  text-transform: capitalize;
+  color: white;
+  font-weight: 500;
+  width: max-content;
+  margin: auto;
+}
+.about-cover span {
+  position: absolute;
+  background-color: var(--bookloft-pink);
+  color: white;
+  padding: 15px 20px;
+  border-radius: var(--border-radius-base);
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.we-are h2 {
+  color: var(--bookloft-dblue);
+  font-weight: 600;
+}
+.we-are p {
+  color: #777;
+}
+/* start FAQ page */
+/* start FAQ page */
+.faq .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.faq .content h1 {
+  color: var(--bookloft-dblue);
+  font-weight: 600;
+}
+.faq .content p {
+  color: #777;
+}
+.faq .title {
+  background-color: var(--bookloft-green);
+  color: white;
+  padding: 5px 5px 5px 10px;
+  border-radius: var(--border-radius-base);
+  font-weight: 500;
+}
+.faq .title button {
+  display: inline-block;
+  background-color: white;
+  color: var(--bookloft-green);
+  margin-left: auto;
+  padding: 10px 15px;
+  border: none;
+  border-radius: var(--border-radius-base);
+  transition: 0.3s;
+}
+.faq .collapse-body {
+  background-color: #f5f5f5;
+  color: #777;
+  border-radius: var(--border-radius-base);
+  padding: 20px;
+}
+.rotate {
+  transform: rotate(-90deg);
+}
+/* start single product page styling */
+/* start single product page styling */
+.single {
+  color: #777;
+}
+.single img {
+  border-radius: var(--border-radius-base);
+}
+.single .content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.single .content h3 {
+  color: var(--bookloft-dblue);
+  font-weight: bold;
+}
+.single .content .write span {
+  display: block;
+}
+.single .content .write span:last-of-type {
+  color: var(--bookloft-dblue);
+  font-size: 18px;
+}
+.single .content .price {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--bookloft-pink);
+}
+.single .content .price span {
+  text-decoration: line-through;
+  font-size: 18px;
+  margin-left: 10px;
+  color: var(--bookloft-dblue);
+  font-weight: initial;
+}
+.single .content a {
+  width: 200px;
+  text-align: center;
+}
+.single2 .details h3 {
+  border-bottom: 1px solid #e1e1f0;
+  text-transform: capitalize;
+  color: var(--bookloft-dblue);
+  padding-bottom: 10px;
+}
+.single2 .details p {
+  border: 1px solid #e1e1f0;
+  padding: 10px;
+  text-transform: capitalize;
+}
+.single2 .details p span:last-of-type {
+  margin-left: 100px;
+  color: #777;
+}
+.single2 .related .related-title {
+  color: var(--bookloft-dblue);
+  padding-left: 10px;
+  border-left: 6px solid var(--bookloft-pink);
+  margin-bottom: 20px;
+}
+.single2 .related img {
+  width: 110px;
+  border-radius: var(--border-radius-base);
+}
+.single2 .related .info {
+  margin-left: 10px;
+  color: var(--bookloft-dblue);
+}
+.single2 .related .info .price {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--bookloft-yellow);
+  border: none;
+}
+.single2 .related .info .price span {
+  text-decoration: line-through;
+  font-size: 14px;
+  color: var(--bookloft-dblue);
+  font-weight: initial;
+}
+/* start cart styling */
+/* start cart styling */
+.side-slide {
+  text-transform: capitalize;
+}
+.side-slide h4 {
+  color: var(--bookloft-dblue);
+  background-color: #eff5f4;
+  text-align: center;
+  padding: 40px 0;
+  font-weight: 600;
+  margin-bottom: 25px;
+  border-radius: var(--border-radius-base);
+}
+.side-slide ul a {
+  padding: 15px 20px;
+  border-top: 1px solid #eeeeee;
+  display: block;
+  transition: 0.3s;
+}
+.side-slide ul a:hover {
+  background-color: #d1e0e0;
+}
+.side-slide ul a i {
+  color: var(--bookloft-pink);
+  margin-right: 10px;
+  font-size: 18px;
+}
+.cart-title {
+  color: var(--bookloft-dblue);
+  padding-left: 10px;
+  border-left: 6px solid var(--bookloft-pink);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.cart .item {
+  margin: 10px;
+  border: 1px solid #eee;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: var(--border-radius-base);
+  position: relative;
+}
+.cart .text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 15px;
+}
+.cart .item h5 {
+  color: var(--bookloft-dblue);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+.cart .item > span {
+  color: #777;
+}
+.cart .item img {
+  width: 120px;
+}
+.cart .item .calc {
+  color: white;
+  font-size: 20px;
+  background-color: var(--bookloft-pink);
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: var(--border-radius-base);
+  cursor: pointer;
+}
+.cart .item span:nth-of-type(2) {
+  margin: 0px 20px;
+  font-size: 22px;
+  color: #777;
+}
+.cart i {
+  position: absolute;
+  color: var(--bookloft-pink);
+  font: 30px;
+  font-weight: bold;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.delivery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.delivery .box {
+  cursor: pointer;
+  border: 1px solid #eee;
+  border-radius: var(--border-radius-base);
+  display: grid;
+  grid-template-columns: 60% 40%;
+  padding: 0px 25px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.delivery .box img {
+  width: 100%;
+}
+.delivery .box span {
+  color: var(--bookloft-green);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.delivery .box:hover span {
+  color: var(--bookloft-pink);
+}
+.delivery .price-box p {
+  margin: 0;
+}
+.delivery .price-box h6 {
+  background-color: var(--bookloft-green);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+.delivery .price-box ul {
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+.delivery .price-box ul li {
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+}
+.delivery .price-box ul li > p {
+  color: var(--bookloft-dblue);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.delivery .price-box ul li > span {
+  color: red;
+  font-size: 14px;
+}
+.delivery form textarea {
+  display: block;
+  border: 1px solid #ccc;
+  width: 100%;
+  border-radius: var(--border-radius-base);
+  background-color: #f5f5f5;
+  resize: none;
+  padding: 10px;
+  transition: 0.3s;
+}
+.delivery form textarea:hover {
+  border: 1px solid var(--bookloft-pink);
+}
+.delivery form textarea:focus {
+  outline: none;
+}
+.delivery form button {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: var(--bookloft-pink);
+  text-decoration: none;
+  padding: 15px;
+  color: white;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 15px;
+  transition: 0.3s;
+  border: none;
+  border-radius: var(--border-radius-base);
+}
+
+.delivery form button::before {
+  content: "";
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-right: 2px solid white;
+  transform: translateX(-100%);
+  z-index: 1;
+  transition: 0.6s;
+}
+
+.delivery form button:hover::before {
+  transform: translateX(0%);
+}
+/* start responive */
+/* start responive */
+@media (max-width: 1200px) {
+  .sticky-nav .categories li a {
+    padding: 26px 10px;
+  }
+  .sticky-nav .buttons a {
+    padding: 12.5px 16px;
+  }
+  .books-container {
+    grid-gap: 30px;
+  }
+}
+@media (max-width: 992px) {
+  body {
+    padding-top: 80px;
+  }
+  .header-bar {
+    display: none;
+  }
+  .side-bar {
+    display: block;
+  }
+  .mySwiper .swiper-slide {
+    font-size: 16px;
+  }
+  .carousel-caption {
+    padding: 10px;
+  }
+  .carousel-caption .buttons .mybtn {
+    width: 300px;
+    padding: 10px 20px;
+  }
+  .mySwiper2 .swiper-slide {
+    padding: 50px 70px 100px;
+  }
+  .mySwiper2 .swiper-slide .book-img {
+    width: 100%;
+  }
+  .mySwiper2 .content {
+    padding-left: 20px;
+  }
+  .mySwiper2 .content h1 {
+    font-size: 20px;
+  }
+  .mySwiper2 .content p:first-of-type {
+    margin-top: 30px;
+  }
+  .mySwiper2 .content p:last-of-type {
+    margin-top: 30px;
+    font-size: 30px;
+  }
+  .mySwiper2 .content p:last-of-type span {
+    font-size: 18px;
+  }
+  .mySwiper2 .content .buttons a {
+    width: 120px;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  .books-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .giveaway {
+    padding-bottom: 20px;
+  }
+  .search-product {
+    padding: 10px;
+  }
+  .search-product .inputs input {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  .search-product .inputs button {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .carousel-caption .buttons .mybtn {
+    width: 150px;
+    padding: 10px 20px;
+  }
+  .carousel-caption .content h1 {
+    font-size: 20px;
+  }
+  .carousel-caption .content > a,
+  .carousel-caption .content .price {
+    font-size: 18px;
+  }
+  .carousel-caption .content .price span {
+    font-size: 14px;
+  }
+  .books-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .delivery {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 576px) {
+  .delivery .box span {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .side-bar .small-nav h6 {
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .cart .text {
+    gap: 7px;
+  }
+  .cart .item h5 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .cart .item img {
+    width: 80px;
+  }
+  .cart .item .calc {
+    font-size: 18px;
+    padding: 3px 10px;
+  }
+  .about-cover {
+    height: 200px;
+  }
+  .about-cover h1 {
+    font-size: 30px;
+  }
+  .about-cover span {
+    padding: 7px 10px;
+    font-size: 14px;
+  }
+  .statistics .service .icon-box {
+    margin: 0px auto 15px;
+    width: 90px;
+    height: 90px;
+  }
+  .services .service p,
+  .statistics .service p {
+    font-size: 15px;
+  }
+  .books-container {
+    grid-gap: 10px;
+  }
+  .books-container .product-card {
+    margin: auto 0px;
+    padding: 10px;
+  }
+  .books-container .product-card h5,
+  .single .content .price span,
+  .single2 .related .info .price {
+    font-size: 16px;
+  }
+  .books-container .product-card a,
+  .books-container .product-card p {
+    padding: 5px;
+    font-size: 14px;
+  }
+  .pagination {
+    width: max-content;
+    margin: auto;
+  }
+  .pagination li a {
+    color: var(--bookloft-dblue);
+    font-size: 14px;
+    margin: 0px 3px;
+    min-width: 20px;
+  }
+  .faq .content h1 {
+    font-size: 20px;
+  }
+  .faq .title h5,
+  .single2 .details p,
+  .cart .item > span {
+    font-size: 14px;
+  }
+  .faq .title button {
+    padding: 5px 10px;
+  }
+  .faq .collapse-body {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .single .content .price {
+    font-size: 24px;
+  }
+  .single .content a {
+    width: 100%;
+  }
+  .single2 .related img {
+    width: 100px;
+  }
+  .single2 .related .info {
+    margin-left: 10px;
+    color: var(--bookloft-dblue);
+  }
+  .mySwiper .swiper-slide {
+    min-height: clac(100vh - 80px);
+    max-height: initial;
+  }
+  .mySwiper .swiper-slide img {
+    display: block;
+    width: auto;
+    height: clac(100vh - 80px);
+    min-height: initial;
+  }
+  .carousel-caption {
+    padding: 0px 5px;
+  }
+  .carousel-caption .buttons .mybtn {
+    width: 50%;
+    padding: 10px 5px;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .carousel-caption .content .order {
+    letter-spacing: 3px;
+  }
+  .carousel-caption .content h1 {
+    font-size: 16px;
+  }
+  .carousel-caption .content {
+    align-items: center;
+  }
+  .carousel-caption .content > a,
+  .carousel-caption .content .price {
+    font-size: 14px;
+  }
+  .carousel-caption .content .price span {
+    font-size: 12px;
+  }
+  .services .service .icon-box {
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  .services .service h5 {
+    font-size: 18px;
+  }
+  .mySwiper2 .swiper-slide {
+    padding: 30px 30px 100px;
+  }
+  .mySwiper2 .swiper-slide .book-img {
+    width: 90%;
+  }
+  .mySwiper2 .content {
+    padding-left: 10px;
+  }
+  .mySwiper2 .content h1 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .mySwiper2 .content p:first-of-type {
+    margin-top: 30px;
+  }
+  .mySwiper2 .content p:last-of-type {
+    font-size: 20px;
+  }
+  .mySwiper2 .content p:last-of-type span {
+    font-size: 16px;
+  }
+  .mySwiper2 .content .buttons a {
+    width: max-content;
+  }
+  .categories {
+    gap: 0%;
+    padding: 0px 10px;
+  }
+  .categories .box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .categories .box a {
+    padding: 40px;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+  .delivery .price-box h6,
+  .delivery .price-box ul li {
+    padding: 15px 10px;
+  }
+  .delivery .price-box ul li p{
+    gap: 20px;
+  }
+}

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Book Loft || HOME</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-bar">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg p-0">
+                    <a class="navbar-brand d-flex align-items-center p-0" href="/index.html">
+                        <img src="https://bookloftlb.galactech.site/images/logo.png" alt="Logo">
+                        <h6><span>Book</span><span>Loft</span></h6>
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <form class="search">
+                            <input class="" type="search" placeholder="Search Books Here">
+                            <button type="submit"><i class="fa fa-magnifying-glass fa-sm"></i></button>
+                        </form>
+                        <div class="extra-nav d-flex align-items-center">
+                            <a href="cart.html"><i class="fa fa-cart-shopping fa-lg"></i></a>
+                            <a href="">Login</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="sticky-nav d-flex align-items-center justify-content-between">
+                    <ul class="categories d-flex align-items-center justify-content-start gap-0 p-0 m-0">
+                        <li><a href="./index.html">home</a></li>
+                        <li><a href="./shop.html">packages</a></li>
+                        <li><a href="./shop.html">shop</a></li>
+                        <li><a href="./shop.html">romance</a></li>
+                        <li><a href="./shop.html">thriller</a></li>
+                        <li><a href="./shop.html">fiction</a></li>
+                        <li><a href="./shop.html">self help</a></li>
+                        <li><a href="./shop.html">fantasy</a></li>
+                    </ul>
+                    <div class="buttons">
+                        <a href="">Request a book</a>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                            <span class="active-checkbox">USD</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="side-bar">
+            <div class="container">
+                <div class="small-nav d-flex align-items-center justify-content-between">
+                    <a class="navbar-brand d-flex align-items-center p-0" href="./index.html">
+                        <img src="https://bookloftlb.galactech.site/images/logo.png" width="80" alt="Logo">
+                        <h6><span>Book</span><span>Loft</span></h6>
+                    </a>
+                    <i class="fa-solid fa-bars fa-xl" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                        aria-controls="offcanvasExample"></i>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header justify-content-center">
+                    <img src="https://bookloftlb.galactech.site/images/logo.png" width="120" alt="Logo">
+                </div>
+                <div class="offcanvas-body">
+                    <form class="search">
+                        <input class="" type="search" placeholder="Search Books Here">
+                        <button type="submit"><i class="fa fa-magnifying-glass fa-sm"></i></button>
+                    </form>
+                    <div class="side-menu d-flex-column align-items-start justify-content-between">
+                        <ul class="categories d-flex-column align-items-start justify-content-start p-0 m-0 mt-3">
+                            <li><a href="./index.html">home</a></li>
+                            <li><a href="./shop.html">packages</a></li>
+                            <li><a href="./shop.html">shop</a></li>
+                            <li><a href="./shop.html">romance</a></li>
+                            <li><a href="./shop.html">thriller</a></li>
+                            <li><a href="./shop.html">fiction</a></li>
+                            <li><a href="./shop.html">self help</a></li>
+                            <li><a href="./shop.html">fantasy</a></li>
+                            <li><a href="">Login</a></li>
+                            <li><a href="cart.html">my cart <i class="fa fa-cart-shopping fa-lg"></i></a></li>
+                        </ul>
+                        <div class="buttons d-flex flex-column justify-content-start align-items-start">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                                <span class="active-checkbox">USD</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="home-swiper">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://bookloftlb.galactech.site/uploads/1673153142phpylF6qn.png" alt="...">
+                    <div class="carousel-caption d-flex flex-column  justify-content-between flex-sm-row">
+                        <div class="content d-flex d-flex flex-column align-items-start">
+                            <h5 class="order">order now</h5>
+                            <h1>it starts with us</h1>
+                            <a href="">romance</a>
+                            <p class="price">500.500 LBP <span>409.500 LBP</span></p>
+                        </div>
+                        <div class="buttons d-flex flex-row align-items-center justify-content-end gap-2 flex-sm-column">
+                            <a href="" class="mybtn add-cart">Add to cart</a>
+                            <a href="" class="mybtn details">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://bookloftlb.galactech.site/uploads/1673153142phpylF6qn.png" alt="...">
+                    <div class="carousel-caption d-flex flex-column  justify-content-between flex-sm-row">
+                        <div class="content d-flex d-flex flex-column align-items-start">
+                            <h5 class="order">order now</h5>
+                            <h1>it starts with us</h1>
+                            <a href="">romance</a>
+                            <p class="price">500.500 LBP <span>409.500 LBP</span></p>
+                        </div>
+                        <div class="buttons d-flex flex-row align-items-center justify-content-end gap-2 flex-sm-column">
+                            <a href="" class="mybtn add-cart">Add to cart</a>
+                            <a href="" class="mybtn details">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="container ">
+        <div class="services row py-5 ">
+            <div class="service col-6 col-md-3"data-aos="fade-up">
+                <div class="icon-box"> <i class="fa fa-motorcycle"></i></div>
+                <h5>Quick Delivery</h5>
+                <p>Your Order requires 2-3 days to arrive to your doorstep</p>
+            </div>
+            <div class="service col-6 col-md-3"data-aos="fade-up">
+                <div class="icon-box"> <i class="fa fa-money-bill"></i></div>
+                <h5>Secure Payment</h5>
+                <p>Pay only when the order arrives to you!</p>
+            </div>
+            <div class="service col-6 col-md-3"data-aos="fade-up">
+                <div class="icon-box"> <i class="fa fa-check"></i></div>
+                <h5> Best Quality</h5>
+                <p>We take pride in our quality, which is considered to be one of the best in the lebanese book market
+                </p>
+            </div>
+            <div class="service col-6 col-md-3"data-aos="fade-up">
+                <div class="icon-box"> <i class="fa fa-refresh"></i></div>
+                <h5>Return Guarantee</h5>
+                <p>You have every right to return your book if there was a problem with it!</p>
+            </div>
+        </div>
+    </div>
+    <section class="book-slider py-5">
+        <div class="text-center book-slider-title">
+            <h1>Book on sale</h1>
+            <p>Shop your Best-Seller Book at the most affordable prices!</p>
+        </div>
+        <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide ">
+                    <div class="row slide-padding">
+                        <div class="col-12 col-sm-5">
+                            <img class="book-img" src="https://bookloftlb.galactech.site/uploads/17788401._SY475_.jpg"
+                                alt="book">
+                        </div>
+                        <div class="col-12 col-sm-7 content d-flex align-items-start justify-content-start flex-column">
+                            <h1>verity</h1>
+                            <span>thriller</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam deserunt qui tempore
+                                facilis hic. Aliquam deleniti ut eveniet illo necessitatibus nostrum aliquid praesentium
+                                beatae, saepe soluta tempora aut dignissimos deserunt?</p>
+                            <p>318.500 LBP<span>400.000 LBP</span></p>
+                            <div class="buttons d-flex flex-row gap-2 align-items-center justify-content-start">
+                                <a href="" class="mybtn add-cart">Add to cart</a>
+                                <a href="" class="mybtn details">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="row slide-padding">
+                        <div class="col-12 col-sm-5">
+                            <img class="book-img" src="https://bookloftlb.galactech.site/uploads/17788401._SY475_.jpg"
+                                alt="book">
+                        </div>
+                        <div class="col-12 col-sm-7 content d-flex align-items-start justify-content-start flex-column">
+                            <h1>verity</h1>
+                            <span>thriller</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam deserunt qui tempore
+                                facilis hic. Aliquam deleniti ut eveniet illo necessitatibus nostrum aliquid praesentium
+                                beatae, saepe soluta tempora aut dignissimos deserunt?</p>
+                            <p>318.500 LBP<span>400.000 LBP</span></p>
+                            <div class="buttons d-flex flex-row gap-2 align-items-center justify-content-start">
+                                <a href="" class="mybtn add-cart">Add to cart</a>
+                                <a href="" class="mybtn details">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <div class="container py-5">
+        <div class="row">
+            <h2 class="cat-title">What are you into ?</h2>
+        </div>
+        <div class="row categories">
+            <div class="box col-12 col-sm-6" data-aos="fade-up">
+                <a href="">
+                    <h3>Romane</h3>
+                </a>
+            </div>
+            <div class="box col-12 col-sm-6" data-aos="fade-up">
+                <a href="">
+                    <h3>Thriller</h3>
+                </a>
+            </div>
+            <div class="box col-12 col-sm-6" data-aos="fade-up">
+
+                <a href="">
+                    <h3>Fiction</h3>
+                </a>
+            </div>
+            <div class="box col-12 col-sm-6" data-aos="fade-up">
+                <a href="">
+                    <h3>Fantasy</h3>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="container ">
+        <div class="statistics row my-5 pt-5">
+            <div class="service col-6 col-md-3 mb-3 mb-sm-0" data-aos="fade-up">
+                <div class="icon-box"> <i class="fa fa-book"></i></div>
+                <h2><span class="counter">150</span>+</h2>
+                <p>Amazing Books</p>
+            </div>
+            <div class="service col-6 col-md-3 mb-3 mb-sm-0" data-aos="fade-up">
+                <div class="icon-box"> <i class="fa fa-user "></i></div>
+                <h2><span class="counter">50</span>+</h2>
+                <p>Famous Writers</p>
+            </div>
+            <div class="service col-6 col-md-3 mb-3 mb-sm-0" data-aos="fade-up">
+                <div class="icon-box"> <i class="fa fa-pen "></i></div>
+                <h2><span class="counter">300</span>+</h2>
+                <p>Happy Customers
+                </p>
+            </div>
+            <div class="service col-6 col-md-3 mb-3 mb-sm-0" data-aos="fade-up">
+                <div class="icon-box"> <i class="fa fa-store  "></i></div>
+                <h2><span class="counter">500</span>+</h2>
+                <p>Satisfactory Orders</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="text-center text-lg-start text-muted">
+        <section>
+            <div class="container text-start mt-5 pt-5">
+                <div class="row mt-3">
+                    <div class="col-md-4 col-xl-3 mx-auto mb-4" data-aos="fade-up">
+                        <img src="https://bookloftlb.galactech.site/images/logo.png" width="200" alt="logo">
+                    </div>
+                    <div class="col-md-4 col-xl-3 mx-auto mb-4" data-aos="fade-up">
+                        <h5 class="text-uppercase fw-bold mb-4">
+                            Our Links
+                        </h5>
+                        <p>
+                            <a href="./about.html" class="text-reset">About us</a>
+                        </p>
+                        <p>
+                            <a href="./faq.html" class="text-reset">Contact us</a>
+                        </p>
+                        <p>
+                            <a href="./faq.html" class="text-reset">FQA</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-xl-3 mx-auto mb-4" data-aos="fade-up">
+                        <h5 class="text-uppercase fw-bold mb-4">
+                            Resources
+                        </h5>
+                        <p>
+                            <a href="./cart.html" class="text-reset">Shopping Cart</a>
+                        </p>
+                        <p>
+                            <a href="./cart.html" class="text-reset">login</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-xl-3 mx-auto mb-md -0 mb-4" data-aos="fade-up">
+                        <h5 class="text-uppercase fw-bold mb-4">Get in Touch With Us</h5>
+                        <p><i class="foot-icon fas fa-phone fa-xl"></i> + 01 234 567 88</p>
+                        <p><i class="foot-icon fas fa-envelope fa-xl"></i>
+                            bookloft@gmail.com</p>
+                            <p><i class="foot-icon fab fa-instagram fa-2x"></i></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+        <div class="text-center p-4 sub-foot d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <span>Book Loft - © 2023 All Rights Reserved</span>
+            <p class="d-flex d-flex-row justify-content-between align-items-center m-0">Developed by  <img
+                    src="https://bookloftlb.galactech.site/images/galactech-logo-cropped.png" alt="galactech"
+                    width="110px"></p>
+        </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="./jquery.countup.min.js"></script>
+    <script src="./main.js"></script>
+    <script> $(".counter").countUp({
+        time: 3000,
+      });</script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            speed: 1000,
+            effect: 'fade',
+            loop: true,
+            autoplay: {
+                delay: 2000
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        var swiper = new Swiper(".mySwiper2", {
+            slidesPerView: "auto",
+            speed: 2000,
+            centeredSlides: true,
+            spaceBetween: 50,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 2000
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>
