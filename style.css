@@ -474,7 +474,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .mySwiper2 .swiper-slide .book-img {
   display: block;
-  width: 70%;
+  width: 100%;
   margin-left: auto;
 }
 .mySwiper2 .content {
@@ -589,9 +589,9 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .categories .box a {
   display: block;
-  background-image: url("https://bookloftlb.galactech.site/images/doodles.png");
-  background-position: center;
-  background-size: cover;
+  /* background-image: url("https://www.clipartmax.com/png/middle/51-517139_open-book-books-icon-115224-icons-etc-clipart-book-icon-no-background.png"); */
+  /* background-position: center; */
+  /* background-size: cover; */
   padding: 70px 50px;
   color: white;
   text-align: center;
@@ -686,6 +686,7 @@ footer .sub-foot {
   background-color: var(--bookloft-pink);
   color: white;
   position: relative;
+  padding:0px 10px;
 }
 .giveaway i {
   position: absolute;
@@ -710,6 +711,9 @@ footer .sub-foot {
   height: 100%;
   background: linear-gradient(to bottom, white, transparent);
   opacity: 0.3;
+}
+.giveaway .text{
+  padding-left: 20px;
 }
 .giveaway h3 {
   font-family: "Quintessential", cursive;
@@ -1072,7 +1076,7 @@ footer .sub-foot {
   border-radius: var(--border-radius-base);
   display: grid;
   grid-template-columns: 60% 40%;
-  padding: 0px 25px;
+  padding:  25px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .delivery .box img {
